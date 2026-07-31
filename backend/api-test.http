@@ -1,0 +1,36 @@
+### Health check
+GET http://localhost:8080/api/health
+
+### Get all jobs
+GET http://localhost:8080/api/jobs
+
+### Get job by ID (Existing)
+GET http://localhost:8080/api/jobs/3
+
+### Get job by ID (Deleted - Test Exception Handling)
+GET http://localhost:8080/api/jobs/2
+
+### Create a new job
+POST http://localhost:8080/api/jobs
+Content-Type: application/json
+
+{
+  "companyName": "Amazon",
+  "jobTitle": "Java Full Stack Developer",
+  "status": "Applied",
+  "applicationDate": "2026-07-31"
+}
+
+### Update job application
+PUT http://localhost:8080/api/jobs/3
+Content-Type: application/json
+
+{
+  "companyName": "Amazon",
+  "jobTitle": "Senior Java Full Stack Developer",
+  "status": "Interview Scheduled",
+  "applicationDate": "2026-07-31"
+}
+
+### Delete job application
+DELETE http://localhost:8080/api/jobs/2
